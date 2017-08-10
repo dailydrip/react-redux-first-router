@@ -14,7 +14,7 @@ const productsReducer = (state = init(), action = {}) => {
     case "HOME":
       return state.setIn(["productId"], undefined);
     case "PRODUCT":
-      return state.setIn(["productId"], 1);
+      return state.setIn(["productId"], action.payload.productId);
     case NOT_FOUND:
       return null;
     default:
